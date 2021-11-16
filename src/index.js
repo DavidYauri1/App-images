@@ -13,7 +13,7 @@ require('./database');
 // settings
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 3001);
+//app.set('port', 8080);
 
 // middlewares
 app.use(morgan('dev'));
@@ -41,6 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // start
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log(`Server on port ${app.get('port')}`);
 });
